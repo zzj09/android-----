@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+
+    <view
+        android:id="@+id/view"
+        class="androidx.appcompat.widget.ActionMenuView"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="#FD0404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <view
+        android:id="@+id/view6"
+        class="androidx.appcompat.widget.ActionMenuView"
+        android:layout_width="433dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="48dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.615"
+        app:srcCompat="@drawable/ic_menu" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.615"
+        app:srcCompat="@drawable/ic_menu_search" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="24dp"
+        android:text="本地音乐"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="24dp"
+        android:alpha="0.5"
+        android:text="在线音乐"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/music_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/Main_nextMusic"
+        app:layout_constraintTop_toTopOf="@+id/view6"
+        app:srcCompat="@drawable/ic_play_bar_btn_play" />
+
+    <ImageView
+        android:id="@+id/Main_nextMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="@+id/view6"
+        app:srcCompat="@drawable/ic_play_bar_btn_next" />
+
+    <TextView
+        android:id="@+id/musicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="15dp"
+        android:width="180dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="未播放"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/bar_picture"
+        app:layout_constraintTop_toTopOf="@+id/view6" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="33dp"
+        app:layout_constraintEnd_toEndOf="@+id/view6"
+        app:layout_constraintTop_toTopOf="@+id/view6"
+        app:srcCompat="@drawable/ic_play_bar_btn_playlist" />
+
+    <TextView
+        android:id="@+id/musicAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="5dp"
+        android:width="180dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="null"
+        android:textSize="13dp"
+        app:layout_constraintStart_toEndOf="@+id/bar_picture"
+        app:layout_constraintTop_toBottomOf="@+id/musicName" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="68dp"
+        android:background="#EFECEC"
+        app:layout_constraintBottom_toTopOf="@+id/view6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.537" />
+
+    <ImageView
+        android:id="@+id/bar_picture"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toTopOf="@+id/view6"
+        app:srcCompat="@drawable/default_cover" />
+</androidx.constraintlayout.widget.ConstraintLayout>

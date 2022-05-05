@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/onlineTopView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FD0404"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/onlineTopText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="热歌榜"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/onlineTopView"
+        app:layout_constraintStart_toEndOf="@+id/onlineReturn"
+        app:layout_constraintTop_toTopOf="@+id/onlineTopView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="210dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/onlineReturn"
+        android:layout_width="34dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/onlineTopView"
+        app:layout_constraintStart_toStartOf="@+id/onlineTopView"
+        app:layout_constraintTop_toTopOf="@+id/onlineTopView"
+        app:layout_constraintVertical_bias="0.51"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onlineTopView" />
+
+    <ImageView
+        android:id="@+id/onlineAlbumImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/onlineTopView"
+        app:srcCompat="@drawable/default_cover" />
+
+    <TextView
+        android:id="@+id/onlineName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/onlineAlbumImage"
+        app:layout_constraintTop_toTopOf="@+id/onlineAlbumImage" />
+
+    <TextView
+        android:id="@+id/updateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/onlineAlbumImage"
+        app:layout_constraintTop_toBottomOf="@+id/onlineName" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/onlineAlbumImage"
+        app:layout_constraintTop_toBottomOf="@+id/updateTime" />
+<!--    android:width="230dp"-->
+<!--    android:singleLine="true"-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
